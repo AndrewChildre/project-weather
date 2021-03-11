@@ -1,14 +1,11 @@
-
-import './App.css';
-
- const key = process.env.REACT_APP_API_KEY;
+import React from 'react'
+import Weather from './Weather'
 function App() {
-  
   return (
-    <div className="weather-app">
-    <h1>This is working</h1>
+    <div>
+      <Weather />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
