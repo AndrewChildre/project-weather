@@ -40,8 +40,15 @@ const Weather = () => {
        }    
     return (
 			<div>
-				<h1>Weather Time</h1>
-				<form>
+                {
+                    weather.data != undefined ?
+                        <div>
+                            <DisplayWeather data={weather.data} />
+                        </div>
+                    :null
+                }
+
+                <form>
 					<input
 						type='text'
 						name='city'
@@ -56,15 +63,8 @@ const Weather = () => {
                 
 					/>
 				</form>
-				<Button className='getWeather' onClick={(e) => weatherData(e)}>Test</Button>
 
-                {
-                    weather.data != undefined ?
-                        <div>
-                            <DisplayWeather data={weather.data} />
-                        </div>
-                    :null
-                }
+                	<Button variant='primary' size ='lg'className='getWeather' onClick={(e) => weatherData(e)}>Sumbit</Button>
 			</div>
 		);
 };

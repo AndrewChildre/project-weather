@@ -1,9 +1,10 @@
 import React from 'react'
 import Weather from './Weather'
-import DisplayWeather from './DisplayWeather'
+import Header from './Header'
 function App() {
   return (
     <div>
+      <Header />
       <Weather />
     </div>
   )
