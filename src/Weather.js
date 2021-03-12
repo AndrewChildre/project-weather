@@ -16,7 +16,7 @@ const Weather = () => {
            alert('HEY MORON!')
        } else {
         const data = await fetch(
-					`https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&appid=${key}`
+					`https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&units=imperial&appid=${key}`
 				).then((res) => (res.json()))
                 .then(data => (data) )
                
@@ -53,6 +53,7 @@ const Weather = () => {
 						name='counrty'
 						placeholder='country'
 						onChange={(e) => handleChange(e)}
+                
 					/>
 				</form>
 				<Button className='getWeather' onClick={(e) => weatherData(e)}>Test</Button>

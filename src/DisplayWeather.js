@@ -3,17 +3,24 @@ import React from 'react';
 const DisplayWeather = (props) => {
 
 const {data} = props;
+console.log(data)
+
+    const icons = 'http://openweathermap.org/img/wn/' + `${data.weather[0].icon}` + '.png'
 
     return (
-        <div className='displayweather'>
+        <div className='display-weather'>
            <div className='maincard'>
-               <span className='cardtitle'>
+               <span className='card-title'>
                    {data.name}, {data.sys.country}. Weather
                </span>
-               <span className='cardsubtitle'>
+               <span className='card-sub-title'>
                    As Of {new Date().toLocaleTimeString()}
                </span>
-               <h1>{data.main.temp}</h1>
+               <h1>{Math.floor(data.main.temp)} deg</h1>
+               <span className='weather-main'>
+                   {data.weather[0].main}
+                   <img src={icons} alt='#' className='weather-icons'/>
+               </span>
                </div> 
         </div>
     );
