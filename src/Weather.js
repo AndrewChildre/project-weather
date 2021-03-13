@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Container } from 'react-bootstrap';
 import DisplayWeather from './DisplayWeather';
-
+import './index.css'
 
 const Weather = () => {
 	const key = process.env.REACT_APP_API_KEY;
@@ -49,6 +49,7 @@ const Weather = () => {
 				/>
 
 				<Form.Control
+                    className='country-box'
 					size='lg'
 					type='text'
 					placeholder='Country 🇺🇸'
@@ -57,19 +58,23 @@ const Weather = () => {
 				/>
 			</form>
 
-			<Button
-				variant='primary'
-				size='lg'
-				className='getWeather'
-				onClick={(e) => weatherData(e)}>
-				Sumbit
-			</Button>
+			
 
 			{weather.data != undefined ? (
 				<div>
 					<DisplayWeather data={weather.data} />
 				</div>
 			) : null}
+               <Container className='get-weather' fluid > 
+            <Button 
+            
+				variant='primary'
+				size='lg'
+				onClick={(e) => weatherData(e)}>
+				Sumbit
+			</Button>
+            </Container>
+            
 		</div>
 	);
 };

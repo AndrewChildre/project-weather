@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://images.pexels.com/photos/1578248/pexels-photo-1578248.jpeg?cs=srgb&dl=pexels-daria-shevtsova-1578248.jpg&fm=jpg);
+   background-size: cover;
+ background-repeat: no-repeat;
   
 }
 
@@ -13,27 +16,46 @@ code {
     monospace;
 }
 .display-weather {
-  background-color: red;
+ background-image: url(https://images.pexels.com/photos/414659/pexels-photo-414659.jpeg?cs=srgb&dl=pexels-pixabay-414659.jpg&fm=jpg);
+ background-size: cover;
+ background-repeat: no-repeat;
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 400px;
+ 
   height: 50vh;
-  border: solid 5px green;
-  border-radius: 20px;
+  
+  /* border: solid 5px green; */
+  border-radius: 10px;
+  margin-top: 25px;
  
 }
 
 .card-title {
   font-size: 80px;
+  
 }
 .card-sub-title{
   font-size: 15px;
 }
 .weather-temp{
   font-size: 50px;
+  margin-left: 20px;
 }
 .weather-main {
   font-size: 30px;
 }
+.get-weather{ display:flex;
+    justify-content:center;
+    align-item:center;
+  margin-top: 50px}
+  form{margin-top: 25px;}
 .carousel{
   margin-top: 50px;
 }
+.country-box{margin-top: 25px;}
 .carousel-indicators {display: none;}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  display:none;
+}
