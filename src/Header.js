@@ -5,11 +5,11 @@ const Header = () => {
     return (
 			<div>
 				<Navbar bg='dark' variant='dark'>
-					<Navbar.Brand href='#home'>Weather Time</Navbar.Brand>
+					<Navbar.Brand href='/'>Weather Time</Navbar.Brand>
 					<Nav className='mr-auto'>
-						<Nav.Link href='#home'>Home</Nav.Link>
-						<Nav.Link href='#features'>Features</Nav.Link>
-						<Nav.Link href='#pricing'>Pricing</Nav.Link>
+						<Nav.Link href='/'>Home</Nav.Link>
+						<Nav.Link href='/about'>About</Nav.Link>
+						<Nav.Link href='/details'>Details</Nav.Link>
 					</Nav>
 				</Navbar>
 			</div>

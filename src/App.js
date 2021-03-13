@@ -1,13 +1,29 @@
-import React from 'react'
-import Weather from './Weather'
-import Header from './Header'
+import React from 'react';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import Layout from './Layout'
+import Weather from './Weather';
+import Header from './Header';
+import About from './About';
+import Details from './Details';
+import { Container } from 'react-bootstrap';
+
 function App() {
-  return (
-    <div>
-      <Header />
-      <Weather />
-    </div>
-  )
+	return (
+		<div>
+      <Container fluid>
+			<Header />
+
+			<Router>
+				<Switch>
+					<Route exact path='/' component={Weather} />
+					<Route path='/about' component={About} />
+					<Route path='/details' component={Details} />
+				</Switch>
+			</Router>
+      </Container>
+		</div>
+	);
 }
 
-export default App
+export default App;
