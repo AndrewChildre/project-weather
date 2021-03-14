@@ -13,7 +13,7 @@ const DisplayWeather = (props) => {
             
 			<div className='display-weather'>
 				<div className='maincard'>
-					<h1 className='card-title'>{data.name}<span className='weather-temp'>   {Math.floor(data.main.temp)} deg</span></h1>
+					<h1 className='card-title'>{data.name}<span className='weather-temp'>   {Math.floor(data.main.temp)}<sup>o</sup> </span></h1>
 					
 					
 					<span className='weather-main'>

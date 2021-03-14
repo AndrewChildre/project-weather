@@ -7,7 +7,7 @@ const Weather = () => {
 	const key = process.env.REACT_APP_API_KEY;
 	const [form, setForm] = useState({
 		city: '',
-		country: '',
+		// country: '',
 	});
 	const [weather, setWeather] = useState([]);
 
@@ -17,7 +17,7 @@ const Weather = () => {
 			alert('HEY MORON!');
 		} else {
 			const data = await fetch(
-				`https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&units=imperial&appid=${key}`
+				`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&units=imperial&appid=${key}`
 			)
 				.then((res) => res.json())
 				.then((data) => data);
@@ -33,9 +33,9 @@ const Weather = () => {
 			setForm({ ...setForm, city: value });
 		}
 
-		if (name == 'country') {
-			setForm({ ...setForm, country: value });
-		}
+		// if (name == 'country') {
+		// 	setForm({ ...setForm, country: value });
+		// }
 	};
 	return (
 		<div>
@@ -48,14 +48,14 @@ const Weather = () => {
 					onChange={(e) => handleChange(e)}
 				/>
 
-				<Form.Control
+				{/* <Form.Control
                     className='country-box'
 					size='lg'
 					type='text'
 					placeholder='Country 🇺🇸'
 					name='country'
 					onChange={(e) => handleChange(e)}
-				/>
+				/> */}
 			</form>
 
 			
@@ -68,10 +68,10 @@ const Weather = () => {
                <Container className='get-weather' fluid > 
             <Button 
             
-				variant='primary'
-				size='lg'
+				variant='secondary'
+				size='lg' block
 				onClick={(e) => weatherData(e)}>
-				Sumbit
+				Submit
 			</Button>
             </Container>
             

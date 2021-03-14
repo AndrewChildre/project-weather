@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import Layout from './Layout'
 import Weather from './Weather';
 import Header from './Header';
 import About from './About';
