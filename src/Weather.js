@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Form, Container } from 'react-bootstrap';
+import { Button, Form, Container, Alert } from 'react-bootstrap';
 import DisplayWeather from './DisplayWeather';
 import './index.css';
-
+	
 const Weather = () => {
 	const key = process.env.REACT_APP_API_KEY;
 
@@ -13,7 +13,7 @@ const Weather = () => {
 	function weatherData(e) {
 		e.preventDefault();
 		if (city == '') {
-			alert('Enter');
+			alert('Select City')
 		} else {
 			fetch(
 				`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`

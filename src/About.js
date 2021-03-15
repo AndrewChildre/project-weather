@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-import { Jumbotron } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import './index.css';
 const About = () => {
 	useEffect(() => {}, []);
 	return (
 		<div>
-			<Jumbotron className='jumbo-content'>
+			
+			<Container fluid className='jumbo-content'>
 				<h1 className='about-title'>Weather Time</h1>
 				<p>Get weather from any city in the world with one search</p>
 				<br />
@@ -15,7 +16,8 @@ const About = () => {
 				<p>andrewchildre@gmail.com | Github: github.com/AndrewChildre</p>
 				<h3>Credits</h3>
 				<p>GA Staff | YouTube | Stack Overflow | React Docs | Google</p>
-			</Jumbotron>
+			</Container>
+			
 		</div>
 	);
 };
