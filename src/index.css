@@ -55,9 +55,7 @@ form {
 .carousel {
 	margin-top: 50px;
 }
-.country-box {
-	margin-top: 25px;
-}
+
 .carousel-indicators {
 	display: none;
 }
@@ -68,4 +66,15 @@ form {
 }
 .carousel-item {
 	margin-bottom: 25px;
+}
+.jumbo-content {
+	margin-top: 50px;
+	background-color: orange;
+	height: 60vh;
+}
+.about-title {
+	font-size: 50px;
+}
+.detail {
+	color: orange;
 }

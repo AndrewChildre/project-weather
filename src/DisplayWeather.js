@@ -3,7 +3,6 @@ import { Container, Carousel } from 'react-bootstrap';
 
 const DisplayWeather = (props) => {
 	const { data } = props;
-	console.log(data);
 
 	const icons =
 		'http://openweathermap.org/img/wn/' + `${data.weather[0].icon}.png`;
