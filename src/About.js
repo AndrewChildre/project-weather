@@ -1,13 +1,12 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 
 const About = () => {
-    useEffect(() => {}, [])
-    return (
-        <div>
-           <h1>About page</h1> 
-        </div>
-    );
-
+	useEffect(() => {}, []);
+	return (
+		<div>
+			<h1>About page</h1>
+		</div>
+	);
 };
 
 export default About;

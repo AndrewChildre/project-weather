@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Button, Form, Container } from 'react-bootstrap';
 import DisplayWeather from './DisplayWeather';
-import './index.css'
+import './index.css';
 
 const Weather = () => {
 	const key = process.env.REACT_APP_API_KEY;
@@ -10,25 +10,26 @@ const Weather = () => {
 		// country: '',
 	});
 
-    
 	const [weather, setWeather] = useState([]);
-
+     
 	async function weatherData(e) {
 		e.preventDefault();
 		if (form.city == '') {
-			alert('HEY MORON!');
+        
+            alert('Enter')
+            
 		} else {
-
 			const data = await fetch(
 				`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&units=imperial&appid=${key}`
 			)
 				.then((res) => res.json())
-				.then((data) => data);
+				.then((data) => data)
 
 			setWeather({ data: data });
 		}
 	}
 	const handleChange = (e) => {
+        e.preventDefault();
 		let name = e.target.name;
 		let value = e.target.value;
 
@@ -61,23 +62,20 @@ const Weather = () => {
 				/> */}
 			</form>
 
-			
-
 			{weather.data != undefined ? (
 				<div>
 					<DisplayWeather data={weather.data} />
 				</div>
 			) : null}
-               <Container className='get-weather' fluid > 
-            <Button 
-            
-				variant='secondary'
-				size='lg' block
-				onClick={(e) => weatherData(e)}>
-				Submit
-			</Button>
-            </Container>
-            
+			<Container className='get-weather' fluid>
+				<Button
+					variant='secondary'
+					size='lg'
+					block
+					onClick={(e) => weatherData(e)}>
+					Submit
+				</Button>
+			</Container>
 		</div>
 	);
 };
