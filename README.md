@@ -9,7 +9,7 @@ Get the current weather for ant city in the world!
 
 React | Git | Bootstrap | VS code | Open Weather API | CSS
 
-###Getting Started / Installation Instructions
+### Getting Started / Installation Instructions
 
 Click link to launch application on browser
 
@@ -17,4 +17,3 @@ Click link to launch application on browser
 
 Bugs in app should be submitted via issues in the git hub repo
 App and Code improvements should be submitted via pull request in the git hub repo
-
