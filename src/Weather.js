@@ -23,9 +23,9 @@ const Weather = () => {
 				`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&units=imperial&appid=${key}`
 			)
 				.then((res) => res.json())
-				.then((data) => data)
+				.then((data) => setWeather({ data: data }))
 
-			setWeather({ data: data });
+			
 		}
 	}
 	const handleChange = (e) => {
