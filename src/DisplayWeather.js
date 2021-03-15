@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 const DisplayWeather = (props) => {
 	const { data } = props;
 	console.log(data);
