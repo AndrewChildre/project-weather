@@ -5,22 +5,20 @@ import './index.css';
 
 const Weather = () => {
 	const key = process.env.REACT_APP_API_KEY;
-	const [form, setForm] = useState({
-		city: '',
-		// country: '',
-	});
+	
+    const [city, setCity] = useState('')
 
 	const [weather, setWeather] = useState([]);
      
-	async function weatherData(e) {
+	function weatherData(e) {
 		e.preventDefault();
-		if (form.city == '') {
+		if (city == '') {
         
             alert('Enter')
             
 		} else {
-			const data = await fetch(
-				`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&units=imperial&appid=${key}`
+			fetch(
+				`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`
 			)
 				.then((res) => res.json())
 				.then((data) => setWeather({ data: data }))
@@ -30,17 +28,13 @@ const Weather = () => {
 	}
 	const handleChange = (e) => {
         e.preventDefault();
-		let name = e.target.name;
-		let value = e.target.value;
-
-		if (name == 'city') {
-			setForm({ ...setForm, city: value });
-		}
+		setCity(e.target.value)
 
 		// if (name == 'country') {
 		// 	setForm({ ...setForm, country: value });
 		// }
 	};
+  
 	return (
 		<div>
 			<form>
@@ -60,7 +54,7 @@ const Weather = () => {
 					name='country'
 					onChange={(e) => handleChange(e)}
 				/> */}
-			</form>
+			
 
 			{weather.data != undefined ? (
 				<div>
@@ -76,6 +70,7 @@ const Weather = () => {
 					Submit
 				</Button>
 			</Container>
+            </form>
 		</div>
 	);
 };
