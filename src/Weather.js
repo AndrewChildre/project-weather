@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Form, Container } from 'react-bootstrap';
 import DisplayWeather from './DisplayWeather';
 import './index.css'
@@ -9,6 +9,8 @@ const Weather = () => {
 		city: '',
 		// country: '',
 	});
+
+    
 	const [weather, setWeather] = useState([]);
 
 	async function weatherData(e) {
@@ -16,6 +18,7 @@ const Weather = () => {
 		if (form.city == '') {
 			alert('HEY MORON!');
 		} else {
+
 			const data = await fetch(
 				`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&units=imperial&appid=${key}`
 			)

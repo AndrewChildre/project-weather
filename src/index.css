@@ -5,10 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(https://images.pexels.com/photos/1578248/pexels-photo-1578248.jpeg?cs=srgb&dl=pexels-daria-shevtsova-1578248.jpg&fm=jpg);
+  background-image: url(https://images.pexels.com/photos/3964839/pexels-photo-3964839.jpeg?cs=srgb&dl=pexels-ready-made-3964839.jpg&fm=jpg);
    background-size: cover;
  background-repeat: no-repeat;
-  
+  height: 100vh;
 }
 
 code {
@@ -16,14 +16,14 @@ code {
     monospace;
 }
 .display-weather {
- background-image: url(https://images.pexels.com/photos/414659/pexels-photo-414659.jpeg?cs=srgb&dl=pexels-pixabay-414659.jpg&fm=jpg);
+ background-image: url(https://images.pexels.com/photos/2930934/pexels-photo-2930934.jpeg?cs=srgb&dl=pexels-sem-steenbergen-2930934.jpg&fm=jpg);
  background-size: cover;
  background-repeat: no-repeat;
   text-align: center;
   padding-top: 40px;
-  padding-bottom: 400px;
- 
-  height: 50vh;
+  padding-bottom: 50px;
+  color: orange;
+  height: 60vh;
   
   /* border: solid 5px green; */
   border-radius: 10px;
@@ -48,10 +48,11 @@ code {
 .get-weather{ display:flex;
     justify-content:center;
     width: 50vw;
-  margin-top: 20px}
+    margin-top: 25px;
+  }
   form{margin-top: 25px;}
 .carousel{
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .country-box{margin-top: 25px;}
 .carousel-indicators {display: none;}
@@ -59,3 +60,4 @@ code {
 .carousel-control-next-icon, .carousel-control-prev-icon{
   display:none;
 }
+.carousel-item{ margin-bottom: 25px;}

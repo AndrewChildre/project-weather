@@ -9,7 +9,7 @@ const Header = () => {
 					<Nav className='mr-auto'>
 						<Nav.Link href='/'>Home</Nav.Link>
 						<Nav.Link href='/about'>About</Nav.Link>
-						<Nav.Link href='/details'>Details</Nav.Link>
+						<Nav.Link className='forecast-detail' href='/details'>Details</Nav.Link>
 					</Nav>
 				</Navbar>
 			</div>
