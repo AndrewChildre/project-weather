@@ -12,7 +12,7 @@ const Weather = () => {
 
 	function weatherData(e) {
 		e.preventDefault();
-		if (city == '') {
+		if (city === '') {
 			alert('Select City')
 		} else {
 			fetch(
@@ -38,7 +38,7 @@ const Weather = () => {
 					onChange={(e) => handleChange(e)}
 				/>
 
-				{weather.data != undefined ? (
+				{weather.data !== undefined ? (
 					<div>
 						<DisplayWeather data={weather.data} />
 					</div>

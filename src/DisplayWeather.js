@@ -11,14 +11,14 @@ const DisplayWeather = (props) => {
 		<Container fluid>
 			<div className='display-weather'>
 				<div className='maincard'>
-					<h1 className='card-title'>
+					<h2 className='card-title'>
 						{data.name}
 						<span className='weather-temp'>
 							{' '}
 							{Math.floor(data.main.temp)}
 							<sup>o</sup>{' '}
 						</span>
-					</h1>
+					</h2>
 
 					<span className='weather-main'>
 						{data.weather[0].main}
