@@ -7,12 +7,13 @@ Get the current weather for any city in the world!
 
 ## **Technologies Used**
 
-React | Git | Bootstrap | VS code | Open Weather API | CSS
+React | Javascript | Git | Bootstrap | VS code | Open Weather API | CSS | HTML
 
 
 ### **Getting Started / Installation Instructions**
 
 Click link to launch application on browser
+https://childre-project-weather.herokuapp.com/
 
 ### **Contribution Guidelines**
 
